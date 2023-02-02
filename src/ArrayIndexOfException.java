@@ -24,19 +24,22 @@ public class ArrayIndexOfException {
 
     public static void elementSearchByIndex(int[] randomArray, int index)
     {
-        if (index < 0 || index >= 100 )
+        try
         {
-            System.out.println("Chỉ số phần tử không hợp lệ");
-            return;
-        }
-        for (int i = 0; i < randomArray.length; i++)
-        {
-            if (i == index)
+            for (int i = 0; i < randomArray.length; i++)
             {
-                System.out.printf("Phần tử tại vị trí %d là : %d", i, randomArray[i]);
-                break;
+                if (randomArray[i] == randomArray[index])
+                {
+                    System.out.printf("Phần tử tại vị trí %d là : %d", i, randomArray[i]);
+                    break;
+                }
             }
         }
+        catch (ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("Chỉ số phần tử không hợp lệ");
+        }
+
     }
     public static void indexInput(int[] randomArray)
     {
