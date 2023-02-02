@@ -26,14 +26,7 @@ public class ArrayIndexOfException {
     {
         try
         {
-            for (int i = 0; i < randomArray.length; i++)
-            {
-                if (randomArray[i] == randomArray[index])
-                {
-                    System.out.printf("Phần tử tại vị trí %d là : %d", i, randomArray[i]);
-                    break;
-                }
-            }
+            System.out.printf("Phần tử tại vị trí %d là : %d", index, randomArray[index]);
         }
         catch (ArrayIndexOutOfBoundsException e)
         {
